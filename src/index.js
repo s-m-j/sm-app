@@ -1,8 +1,12 @@
 import React from "react";
-import ReactDOM from "react=dom/client";
+import ReactDOM from "react-dom/client";
+
+/* function Greeting() {
+  return <h3>My First Componene</h3>;
+} */
 
 function Greeting() {
-  return <h3>My First Componene</h3>;
+  return React.createElement("h2", {}, "Hello from Me");
 }
 
 // В шаблоне документа (index.html) находим элемент с идентификатором root

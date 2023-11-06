@@ -39,3 +39,9 @@ root.render(<Greeting />);
 
 - Начинается с заглавной буквы
 - возвращает разметку JSX
+
+# Устанавливаем расширения среды
+
+- Highlight Matching Tag
+- emmet
+- ES7+ React/Redux/React-Native/JS snippets
