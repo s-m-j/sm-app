@@ -26,14 +26,15 @@ const Book = () => {
 };
 
 const Image = () => (
-  <img
-    src="./images/Aleksej_Ivanov_Tobol.jpg"
-    alt="Статистические последствия жирных хвостов"
-  />
+  <img src="./images/Aleksej_Ivanov_Tobol.jpg" alt="Алексей иванов. Тобол" />
 );
 const Title = () => <h2>Title of the Book</h2>;
 const Author = () => {
-  return <h4>Author</h4>;
+  return (
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.5rem" }}>
+      Алексей Иванов
+    </h4>
+  );
 };
 
 // В шаблоне документа (index.html) находим элемент с идентификатором root
