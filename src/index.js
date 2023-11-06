@@ -5,6 +5,10 @@ const BookList = () => {
   return (
     <section>
       <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
     </section>
   );
 };
@@ -19,8 +23,13 @@ const Book = () => {
   );
 };
 
-const Image = () => <h2>image place</h2>;
-const Title = () => <h2>Book Title</h2>;
+const Image = () => (
+  <img
+    src="https://ir.ozone.ru/s3/multimedia-0/wc700/6687209160.jpg"
+    alt="Статистические последствия жирных хвостов"
+  />
+);
+const Title = () => <h2>Title of the Book</h2>;
 const Author = () => {
   return <h4>Author</h4>;
 };
