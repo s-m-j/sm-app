@@ -1,28 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/* function Greeting() {
-  return <div>
-            <h3>My First Componene</h3>
-        </div>;
-} */
-
-function Greeting() {
+const BookList = () => {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+    </section>
   );
-}
+};
 
-const Person = () => <h2>Vasya Pupkin</h2>;
-const Message = () => {
-  return <p>Simple message</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => <h2>image place</h2>;
+const Title = () => <h2>Book Title</h2>;
+const Author = () => {
+  return <h4>Author</h4>;
 };
 
 // В шаблоне документа (index.html) находим элемент с идентификатором root
 // И сопоставляем с ним корневой элемент приложения (этот элемент единственный, остальные будут вложены в нем)
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<BookList />);
