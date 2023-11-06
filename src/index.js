@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import "./index.css";
+
 const BookList = () => {
   return (
-    <section>
+    <section className="booklist">
       <Book />
       <Book />
       <Book />
@@ -15,7 +17,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -25,7 +27,7 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src="https://ir.ozone.ru/s3/multimedia-0/wc700/6687209160.jpg"
+    src="./images/Aleksej_Ivanov_Tobol.jpg"
     alt="Статистические последствия жирных хвостов"
   />
 );

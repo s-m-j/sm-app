@@ -45,3 +45,9 @@ root.render(<Greeting />);
 - Highlight Matching Tag
 - emmet
 - ES7+ React/Redux/React-Native/JS snippets
+
+#### Local Images (Public Folder)
+
+- внешние изображения (на другом хостинге) - нужен только url
+- локальные изображения (public folder) меньшая производительность
+- локальные изображения (src folder) - лучше, они оптимизируются ("под капотом")
