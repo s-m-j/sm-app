@@ -2,11 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 /* function Greeting() {
-  return <h3>My First Componene</h3>;
+  return <div>
+            <h3>My First Componene</h3>
+        </div>;
 } */
 
 function Greeting() {
-  return React.createElement("h2", {}, "Hello from Me");
+  return React.createElement(
+    "div",
+    {},
+    React.createElement("h2", {}, "Hello from My Component")
+  );
 }
 
 // В шаблоне документа (index.html) находим элемент с идентификатором root
