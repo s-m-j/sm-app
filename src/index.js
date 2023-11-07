@@ -2,30 +2,39 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-
-const title = "Тобол";
-const author = "Алексей Иванов";
-const img = "./images/Aleksej_Ivanov_Tobol.jpg";
+const books = [
+  {
+    author: "Алексей Иванов",
+    title: "Тобол. Много званных",
+    img: "./images/Aleksej_Ivanov_Tobol.jpg",
+    id: 1,
+  },
+  {
+    author: "Эдуард Овечкин",
+    title: "Акулы из стали",
+    img: "./images/Eduard_Ovechkin__Akuly_iz_stali.jpg",
+    id: 2,
+  },
+];
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
-      <Book author={author} title={title} img={img} />
+      {books.map((book) => {
+        const { img, title, author, id } = book;
+        return <Book img={img} title={title} author={author} key={id} />;
+      })}
     </section>
   );
 };
 
 const Book = (props) => {
+  const { img, title, author } = props;
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author.toUpperCase()}</h4>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };
